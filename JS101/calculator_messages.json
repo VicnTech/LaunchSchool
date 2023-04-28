@@ -1,0 +1,9 @@
+{
+    "askFirstNum": "What's the first number?",
+    "askSecondNum": "What's the second number?",
+    "sayInvalid": "Hmm... that doesn't look like a valid number.",
+    "askOperation": "What operation would you like to perform?\n1) Add 2) Subtract 3) Multiply 4) Divide",
+    "sayResult": "The result is: ",
+    "askAnother": "Would you like to perform another calculation? ",
+    "sayNotAnswer": "This is not an answer."
+}
