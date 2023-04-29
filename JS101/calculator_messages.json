@@ -1,9 +1,35 @@
 {
-    "askFirstNum": "What's the first number?",
-    "askSecondNum": "What's the second number?",
-    "sayInvalid": "Hmm... that doesn't look like a valid number.",
-    "askOperation": "What operation would you like to perform?\n1) Add 2) Subtract 3) Multiply 4) Divide",
-    "sayResult": "The result is: ",
-    "askAnother": "Would you like to perform another calculation? ",
-    "sayNotAnswer": "This is not an answer."
+    "english": {
+        "welcome": "Welcome to Calculator!",
+        "askFirstNum": "What's the first number?",
+        "askSecondNum": "What's the second number?",
+        "sayInvalid": "Hmm... that doesn't look like a valid number.",
+        "askOperation": "What operation would you like to perform?\n1) Add 2) Subtract 3) Multiply 4) Divide",
+        "sayNotOperator": "Must choose 1, 2, 3, or 4",
+        "sayResult": "The result is: ",
+        "askAnother": "Would you like to perform another calculation? Y/N?",
+        "sayNotYN": "Your answer is not a 'Y' or 'N'."
+    }, 
+    "spanish": {
+        "welcome": "¡Bienvenido a Calculadora!",
+        "askFirstNum": "¿Cuál es el primer número?",
+        "askSecondNum": "¿Cuál es el segundo número?",
+        "sayInvalid": "Hmm... eso no parece un número válido.",
+        "askOperation": "¿Qué operación te gustaría realizar?\n1) Sumar 2) Restar 3) Multiplicar 4) Dividir",
+        "sayNotOperator": "Debe elegir 1, 2, 3 o 4",
+        "sayResult": "El resultado es: ",
+        "askAnother": "¿Desea realizar otro cálculo? Y/N?",
+        "sayNotYN": "Su respuesta no es 'Y' o 'N'."
+    },
+    "french": {
+        "welcome": "Bienvenue sur Calculatrice!",
+        "askFirstNum": "Quel est le premier numéro?",
+        "askSecondNum": "Quel est le deuxième numéro?",
+        "sayInvalid": "Hmm... ça ne ressemble pas à un numéro valide.",
+        "askOperation": "Quelle opération souhaitez-vous effectuer?\n1) Additionner 2) Soustraire 3) Multiplier 4) Diviser",
+        "sayNotOperator": "Vous devez choisir 1, 2, 3 ou 4",
+        "sayResult": "Le résultat est: ",
+        "askAnother": "Souhaitez-vous effectuer un autre calcul? Y/N?",
+        "sayNotYN": "Votre réponse n'est pas un 'Y' ou un 'N'."
+    }
 }
