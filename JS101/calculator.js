@@ -13,8 +13,8 @@ function invalidNumber(number) {
   return number.trimStart() === '' || Number.isNaN(Number(number));
 }
 
-prompt(`1) English? 2) Español? 3) Français?`);
-let language = readline.question();
+// Ask user to determine the language.
+let language = "";
 let continueLoop = true;
 while (continueLoop) {
   switch (language) {
@@ -30,11 +30,27 @@ while (continueLoop) {
       language = "french";
       continueLoop = false;
       break;
+    default:
+      prompt(`1) English? 2) Español? 3) Français?`);
+      language = readline.question();
   }
 }
 
-prompt(message(language, 'welcome'));
+prompt(message('welcome'));
+
+// Ask for name
+let username = readline.question();
 let anotherCalc = true;
+while (anotherCalc) {
+  if (username === "" || username.length < 2 || username.match("12334567890")) {
+    prompt(message('validName'));
+    username = readline.question();
+  } else {
+    anotherCalc = false;
+  }
+}
+
+anotherCalc = true;
 while (anotherCalc) {
   // Ask the user for the first number.
   prompt(message('askFirstNum'));
@@ -58,7 +74,7 @@ while (anotherCalc) {
   prompt(message('askOperation'));
   let operation = readline.question();
   while (!['1', '2', '3', '4'].includes(operation)) {
-    prompt(message(language, 'sayNotOperator'));
+    prompt(message('sayNotOperator'));
     operation = readline.question();
   }
 
@@ -80,18 +96,18 @@ while (anotherCalc) {
   }
 
   // Print the result to the terminal.
-  prompt(`${message(language, 'sayResult')}${output}`);
+  prompt(`${message('sayResult')}${output}`);
 
   // New calcuation? prompt
   continueLoop = true;
   while (continueLoop) {
-    prompt(message(language, 'askAnother'));
+    prompt(`${username}. ${message('askAnother')}`);
     let yesOrNo = readline.question();
     if (yesOrNo.toLowerCase()[0] === "n") {
       anotherCalc = false;
       continueLoop = false;
     } else if (yesOrNo.toLowerCase()[0] === "y") {
       continueLoop = false;
-    } else {prompt(message(language, 'sayNotYN'))}
+    } else {prompt(message('sayNotYN'))}
   }
 } //end while anotherCalc loop
