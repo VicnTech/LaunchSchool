@@ -5,8 +5,8 @@ function prompt(message) {
   console.log(`=> ${message}`);
 }
 
-function message(lang, message) {
-  return MESSAGES[lang][message];
+function message(message) {
+  return MESSAGES[language][message];
 }
 
 function invalidNumber(number) {
@@ -37,25 +37,25 @@ prompt(message(language, 'welcome'));
 let anotherCalc = true;
 while (anotherCalc) {
   // Ask the user for the first number.
-  prompt(message(language, 'askFirstNum'));
+  prompt(message('askFirstNum'));
   let number1 = readline.question();
 
   while (invalidNumber(number1)) {
-    prompt(message(language, 'sayInvalid'));
+    prompt(message('sayInvalid'));
     number1 = readline.question();
   }
 
   // Ask the user for the second number.
-  prompt(message(language, 'askSecondNum'));
+  prompt(message('askSecondNum'));
   let number2 = readline.question();
 
   while (invalidNumber(number2)) {
-    prompt(message(language, 'sayInvalid'));
+    prompt(message('sayInvalid'));
     number2 = readline.question();
   }
 
   // Ask the user for an operation to perform.
-  prompt(message(language, 'askOperation'));
+  prompt(message('askOperation'));
   let operation = readline.question();
   while (!['1', '2', '3', '4'].includes(operation)) {
     prompt(message(language, 'sayNotOperator'));
