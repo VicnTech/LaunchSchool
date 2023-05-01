@@ -107,6 +107,7 @@ while (anotherCalc) {
       anotherCalc = false;
       continueLoop = false;
     } else if (yesOrNo.toLowerCase()[0] === "y") {
+      console.clear();
       continueLoop = false;
     } else {prompt(message('sayNotYN'))}
   }
