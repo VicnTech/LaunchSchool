@@ -1,5 +1,6 @@
 const readline = require('readline-sync');
 const MESSAGES = require('./calculator_messages.json');
+let language = "";
 
 function prompt(message) {
   console.log(`=> ${message}`);
@@ -14,7 +15,6 @@ function invalidNumber(number) {
 }
 
 // Ask user to determine the language.
-let language = "";
 let continueLoop = true;
 while (continueLoop) {
   switch (language) {
@@ -39,19 +39,20 @@ while (continueLoop) {
 prompt(message('welcome'));
 
 // Ask for name
+prompt(message('askName'));
 let username = readline.question();
-let anotherCalc = true;
-while (anotherCalc) {
+continueLoop = true;
+while (continueLoop) {
   if (username === "" || username.length < 2 || username.match("12334567890")) {
     prompt(message('validName'));
     username = readline.question();
   } else {
-    anotherCalc = false;
+    continueLoop = false;
   }
 }
 
-anotherCalc = true;
-while (anotherCalc) {
+continueLoop = true;
+while (continueLoop) {
   // Ask the user for the first number.
   prompt(message('askFirstNum'));
   let number1 = readline.question();
@@ -95,20 +96,19 @@ while (anotherCalc) {
       break;
   }
 
-  // Print the result to the terminal.
   prompt(`${message('sayResult')}${output}`);
 
   // New calcuation? prompt
-  continueLoop = true;
-  while (continueLoop) {
+  let yesNoLoop = true;
+  while (yesNoLoop) {
     prompt(`${username}. ${message('askAnother')}`);
     let yesOrNo = readline.question();
     if (yesOrNo.toLowerCase()[0] === "n") {
-      anotherCalc = false;
       continueLoop = false;
+      yesNoLoop = false;
     } else if (yesOrNo.toLowerCase()[0] === "y") {
       console.clear();
-      continueLoop = false;
+      yesNoLoop = false;
     } else {prompt(message('sayNotYN'))}
   }
 } //end while anotherCalc loop

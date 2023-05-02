@@ -1,6 +1,7 @@
 {
     "english": {
-        "welcome": "Welcome to Calculator! Enter your name:",
+        "welcome": "Welcome to Calculator!",
+        "askName": "Enter your name:",
         "validName": "Make sure to enter a valid name without a numeral (i.e. 1, 2...).",
         "askFirstNum": "What's the first number?",
         "askSecondNum": "What's the second number?",
@@ -12,7 +13,8 @@
         "sayNotYN": "Your answer is not a 'Y' or 'N'."
     }, 
     "spanish": {
-        "welcome": "¡Bienvenido a Calculadora! Introduzca su nombre:",
+        "welcome": "¡Bienvenido a Calculadora!",
+        "askName": "Introduzca su nombre:",
         "validName": "Asegúrese de ingresar un nombre válido sin un número (es decir, 1, 2...).",
         "askFirstNum": "¿Cuál es el primer número?",
         "askSecondNum": "¿Cuál es el segundo número?",
@@ -24,7 +26,8 @@
         "sayNotYN": "Escriba 'Y' por si o 'N' por no."
     },
     "french": {
-        "welcome": "Bienvenue sur Calculatrice! Entrez votre nom:",
+        "welcome": "Bienvenue sur Calculatrice!",
+        "askName": "Entrez votre nom:",
         "validName": "Assurez-vous d'entrer un nom valide sans chiffre (c'est-à-dire 1, 2...).",
         "askFirstNum": "Quel est le premier numéro?",
         "askSecondNum": "Quel est le deuxième numéro?",
